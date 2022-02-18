@@ -19,6 +19,8 @@ import {
   View,
 } from 'react-native';
 
+import Config from 'react-native-config'
+
 import {
   Colors,
   DebugInstructions,
@@ -69,11 +71,12 @@ const App = () => {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
-        <View
+        <View><Text>{Config.API_URL}</Text></View>
+        {/* <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
+          }}> */}
+          {/* <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -86,8 +89,8 @@ const App = () => {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
-        </View>
+          <LearnMoreLinks /> */}
+        {/* </View> */}
       </ScrollView>
     </SafeAreaView>
   );
